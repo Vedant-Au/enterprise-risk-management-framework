@@ -1,61 +1,48 @@
-# Enterprise Risk Management Framework
+# Enterprise Risk Management for a Growing Engineering Group
 
-**A board-to-operations risk register, scoring engine and governance roadmap for a multi-jurisdictional engineering SME.**
+**A proportionate board-to-operations risk model for a £25M multi-jurisdictional engineering group.**
 
 [![Quality checks](https://github.com/Vedant-Au/enterprise-risk-management-framework/actions/workflows/quality.yml/badge.svg)](https://github.com/Vedant-Au/enterprise-risk-management-framework/actions/workflows/quality.yml)
 
-**Portfolio:** [Digital inclusion](https://github.com/Vedant-Au/ons-census-2031-digital-inclusion-risk) · [Accessibility business case](https://github.com/Vedant-Au/accessible-employee-services-business-case) · [Carbon modelling](https://github.com/Vedant-Au/offshore-wind-carbon-footprint-model) · [Workflow automation](https://github.com/Vedant-Au/vfx-workflow-automation-decision-model)
-
-> Portfolio context: this repository develops an MSc group consulting case for WB Alloys Group into a reusable analytical framework. It is not an official WB Alloys risk register, and all example scores require validation in facilitated risk workshops.
-
-## Recruiter quick scan
-
-| Lens | Evidence |
-| --- | --- |
-| Executive problem | Fragmented risk ownership and inconsistent escalation across a growing group |
-| Analysis | Inherent/residual scoring, FMEA, heat maps, KRIs and control ownership |
-| Recommendation | Staged ERM operating model with proportionate governance |
-| Assurance | Reproducible scoring, validation rules and automated tests |
-
-**Contribution and provenance:** the source was an MSc group consulting case. This repository is an individual portfolio reconstruction of the analytical model, governance design and implementation roadmap. Example risks and scores are workshop inputs, not verified company facts.
-
-## Decision question
-
-How can a growing industrial group move from fragmented, reactive controls to consistent enterprise-wide risk intelligence without imposing an enterprise-scale bureaucracy?
+**Role:** Team Lead, MSc client engagement  
+**Client context:** WB Alloys Group  
+**Core decision:** how to create consistent risk intelligence without importing enterprise-scale bureaucracy
 
 ## Recommendation
 
-Adopt a staged ERM operating model aligned with ISO 31000 and COSO principles:
+Adopt ERM in stages. Start with board oversight, appetite, named ownership and a common register; then introduce monthly KRIs and quarterly group reporting. Scenario and Monte Carlo methods should follow only when ownership and data quality are reliable enough to support them.
 
-1. Establish board oversight, risk appetite and named ownership.
-2. Launch a central register and common 5x5 scoring method.
-3. Add monthly KRIs and quarterly group reporting for red and amber risks.
-4. Introduce scenario and Monte Carlo methods only after data quality is reliable.
+That sequencing matters. A more sophisticated model would not compensate for fragmented accountability or inconsistent source data.
 
-The example register highlights commodity exposure, equipment downtime, supply interruption, cyber risk and key-person dependency as cross-functional priorities.
+## What I led
+
+During the engagement I led the translation of ISO 31000 and COSO principles into a three-layer governance model and risk lifecycle for the group. The team used FMEA, Bow-Tie and simulation methods to assess strategic and operational exposure and produced a phased implementation roadmap.
+
+This repository publishes a sanitised, reproducible implementation of the register, scoring, FMEA and KRI components. It deliberately separates client-derived examples from illustrative entries.
+
+## Priority view
+
+The example register brings commodity exposure, equipment downtime, supplier interruption, cyber risk and key-person dependency into one escalation model. Residual risk remains high where control evidence is weak, even when the inherent risk is already understood.
 
 ![Residual risk priorities](outputs/figures/residual_risk_priorities.png)
 
 ![Risk heat map](outputs/figures/risk_heatmap.png)
 
-## Analytical toolkit
+| Implemented component | Decision use |
+| --- | --- |
+| Inherent and residual 5x5 scoring | Distinguish exposure from current control effect |
+| RAG escalation and review cadence | Focus management attention and set reporting rhythm |
+| Named owners and KRIs | Turn the register into an operating mechanism |
+| FMEA Risk Priority Number | Prioritise operational failure modes |
+| Evidence-status field | Prevent illustrative scores being mistaken for verified facts |
 
-- 5x5 likelihood-impact scoring and RAG escalation
-- Inherent versus residual risk comparison
-- Risk taxonomy and ownership fields
-- FMEA Risk Priority Numbers for operational failure modes
-- KRI definitions and review cadence
-- Three-layer governance and four-phase implementation roadmap
+## Design trade-off
 
-## Skills demonstrated
+The model favours **governance maturity before analytical complexity**. The first implementation phase can run in a controlled spreadsheet or lightweight register. More advanced scenario modelling is gated behind agreed taxonomies, reliable KRIs and facilitated scoring workshops.
 
-- Enterprise-risk diagnosis and governance design
-- Risk-register data modelling
-- Heat-map and residual-risk prioritisation
-- FMEA, bow-tie and KRI integration
-- Executive controls, accountability and maturity planning
+The [implementation roadmap](docs/IMPLEMENTATION.md) sets out the ownership, cadence and maturity sequence. The [methodology](docs/METHODOLOGY.md) documents scoring rules, while [validation](docs/VALIDATION.md) distinguishes reproduced evidence from examples.
 
-## Reproduce
+## Reproduce the implementation
 
 ```bash
 python -m venv .venv
@@ -65,4 +52,6 @@ python analysis.py
 python -m unittest discover -s tests -v
 ```
 
-See [methodology](docs/METHODOLOGY.md), [implementation roadmap](docs/IMPLEMENTATION.md), [validation status](docs/VALIDATION.md), and [asset notice](ASSET_NOTICE.md).
+## Evidence boundary
+
+This is not an official WB Alloys risk register. Organisation-specific tolerances, owners, controls and scores require validation in facilitated workshops. Commercial source material and the submitted MSc report are excluded; see [ASSET_NOTICE.md](ASSET_NOTICE.md).
