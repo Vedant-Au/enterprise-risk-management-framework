@@ -2,7 +2,22 @@
 
 **A board-to-operations risk register, scoring engine and governance roadmap for a multi-jurisdictional engineering SME.**
 
+[![Quality checks](https://github.com/Vedant-Au/enterprise-risk-management-framework/actions/workflows/quality.yml/badge.svg)](https://github.com/Vedant-Au/enterprise-risk-management-framework/actions/workflows/quality.yml)
+
+**Portfolio:** [Digital inclusion](https://github.com/Vedant-Au/ons-census-2031-digital-inclusion-risk) · [Accessibility business case](https://github.com/Vedant-Au/accessible-employee-services-business-case) · [Carbon modelling](https://github.com/Vedant-Au/offshore-wind-carbon-footprint-model) · [Workflow automation](https://github.com/Vedant-Au/vfx-workflow-automation-decision-model)
+
 > Portfolio context: this repository develops an MSc group consulting case for WB Alloys Group into a reusable analytical framework. It is not an official WB Alloys risk register, and all example scores require validation in facilitated risk workshops.
+
+## Recruiter quick scan
+
+| Lens | Evidence |
+| --- | --- |
+| Executive problem | Fragmented risk ownership and inconsistent escalation across a growing group |
+| Analysis | Inherent/residual scoring, FMEA, heat maps, KRIs and control ownership |
+| Recommendation | Staged ERM operating model with proportionate governance |
+| Assurance | Reproducible scoring, validation rules and automated tests |
+
+**Contribution and provenance:** the source was an MSc group consulting case. This repository is an individual portfolio reconstruction of the analytical model, governance design and implementation roadmap. Example risks and scores are workshop inputs, not verified company facts.
 
 ## Decision question
 
@@ -50,4 +65,4 @@ python analysis.py
 python -m unittest discover -s tests -v
 ```
 
-See [methodology](docs/METHODOLOGY.md), [implementation roadmap](docs/IMPLEMENTATION.md), [validation status](docs/VALIDATION.md), [asset notice](ASSET_NOTICE.md), and [GitHub setup](GITHUB_SETUP.md).
+See [methodology](docs/METHODOLOGY.md), [implementation roadmap](docs/IMPLEMENTATION.md), [validation status](docs/VALIDATION.md), and [asset notice](ASSET_NOTICE.md).
