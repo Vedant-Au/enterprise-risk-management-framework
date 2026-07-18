@@ -1,0 +1,5 @@
+failure_mode,severity,occurrence,detectability,reported_priority,rpn
+Hose assembly defect not detected,8,3,7,High,168
+Pressure test miscalibration,9,2,6,High,108
+Incorrect weld consumable dispatch,6,4,4,Medium,96
+Chemical exposure from cleaning,8,2,5,Medium,80

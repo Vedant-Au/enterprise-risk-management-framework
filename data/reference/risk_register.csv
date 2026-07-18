@@ -1,0 +1,9 @@
+risk_id,category,business_unit,risk_title,owner,likelihood,impact,velocity,control_effectiveness,residual_score,response,kri,review_frequency,evidence_status
+FIN-001,Financial,Group Finance,Commodity price volatility,Finance Director,4,4,Fast,Moderate,12,Transfer/Reduce,LME copper and nickel variance vs budget,Monthly,Report example
+OPS-001,Operational,WB Alloy Welding,Equipment failure and production downtime,Operations Manager,4,5,Fast,Moderate,15,Reduce,Unplanned downtime hours per month,Monthly,Report example
+SUP-001,Supply Chain,Procurement,Critical supplier disruption,Procurement Lead,4,4,Fast,Moderate,12,Reduce,Supplier on-time delivery rate,Monthly,Illustrative
+CYB-001,Technology,Group IT,Cyber incident or industrial IP loss,IT Lead,3,5,Fast,Weak,15,Reduce,High-severity security events,Monthly,Illustrative
+PEO-001,People,Group,Key-person dependency,HR Director,4,4,Moderate,Weak,12,Reduce,Critical roles without trained deputy,Quarterly,Illustrative
+REG-001,Compliance,Nuclear Supply,Nuclear-code non-compliance,Quality Director,2,5,Fast,Moderate,8,Reduce,Open major audit findings,Monthly,Illustrative
+GEO-001,Emerging,International Operations,Geopolitical or trade disruption,Managing Director,3,4,Moderate,Weak,9,Reduce,Revenue exposed to disrupted jurisdictions,Quarterly,Illustrative
+REP-001,Reputational,Quality,Material contamination or quality escape,Quality Director,3,5,Fast,Moderate,10,Reduce,Customer complaints and batch recalls,Monthly,Illustrative
