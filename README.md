@@ -1,6 +1,6 @@
 # Enterprise Risk, Made Operational
 
-### A board-to-frontline control model for a £25M engineering group
+> A board-to-frontline control model for a £25M engineering group
 
 [![Quality checks](https://github.com/Vedant-Au/enterprise-risk-management-framework/actions/workflows/quality.yml/badge.svg)](https://github.com/Vedant-Au/enterprise-risk-management-framework/actions/workflows/quality.yml)
 
