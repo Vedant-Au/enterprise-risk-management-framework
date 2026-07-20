@@ -1,57 +1,64 @@
-# Enterprise Risk Management for a Growing Engineering Group
+# Enterprise Risk, Made Operational
 
-**A proportionate board-to-operations risk model for a £25M multi-jurisdictional engineering group.**
+### A board-to-frontline control model for a £25M engineering group
 
 [![Quality checks](https://github.com/Vedant-Au/enterprise-risk-management-framework/actions/workflows/quality.yml/badge.svg)](https://github.com/Vedant-Au/enterprise-risk-management-framework/actions/workflows/quality.yml)
 
-**Role:** Team Lead, MSc client engagement  
-**Client context:** WB Alloys Group  
-**Core decision:** how to create consistent risk intelligence without importing enterprise-scale bureaucracy
+**Client context:** WB Alloys Group | **Engagement role:** Team Lead
 
-## Recommendation
+The challenge was not producing a longer list of risks. It was creating a reporting rhythm that could work across business units and jurisdictions without importing enterprise-scale bureaucracy.
 
-Adopt ERM in stages. Start with board oversight, appetite, named ownership and a common register; then introduce monthly KRIs and quarterly group reporting. Scenario and Monte Carlo methods should follow only when ownership and data quality are reliable enough to support them.
+## The operating model
 
-That sequencing matters. A more sophisticated model would not compensate for fragmented accountability or inconsistent source data.
+```mermaid
+flowchart TD
+    A["Board: appetite and oversight"] --> B["Group risk view"]
+    B --> C["Business-unit owners"]
+    C --> D["Controls and actions"]
+    D --> E["KRIs and evidence"]
+    E --> B
+```
 
-## What I led
+The recommended sequence is governance first, register second, monitoring third and advanced analytics last. Monte Carlo analysis is not maturity if ownership, taxonomy and KRI data are still inconsistent.
 
-During the engagement I led the translation of ISO 31000 and COSO principles into a three-layer governance model and risk lifecycle for the group. The team used FMEA, Bow-Tie and simulation methods to assess strategic and operational exposure and produced a phased implementation roadmap.
-
-This repository publishes a sanitised, reproducible implementation of the register, scoring, FMEA and KRI components. It deliberately separates client-derived examples from illustrative entries.
-
-## Priority view
-
-The example register brings commodity exposure, equipment downtime, supplier interruption, cyber risk and key-person dependency into one escalation model. Residual risk remains high where control evidence is weak, even when the inherent risk is already understood.
+## What the board would see
 
 ![Residual risk priorities](outputs/figures/residual_risk_priorities.png)
 
+The model brings commodity exposure, equipment downtime, supplier interruption, cyber risk and key-person dependency into one escalation view. It distinguishes:
+
+- **inherent exposure** from **post-control residual risk**;
+- a control description from evidence that the control works;
+- board-level escalation from local action ownership; and
+- strategic risks from process failures better assessed through FMEA.
+
 ![Risk heat map](outputs/figures/risk_heatmap.png)
 
-| Implemented component | Decision use |
-| --- | --- |
-| Inherent and residual 5x5 scoring | Distinguish exposure from current control effect |
-| RAG escalation and review cadence | Focus management attention and set reporting rhythm |
-| Named owners and KRIs | Turn the register into an operating mechanism |
-| FMEA Risk Priority Number | Prioritise operational failure modes |
-| Evidence-status field | Prevent illustrative scores being mistaken for verified facts |
+## First 90 days
 
-## Design trade-off
+| Weeks | Management action | Proof of progress |
+| --- | --- | --- |
+| 1-3 | Approve appetite, taxonomy and reporting ownership | Named sponsor and accountable owners |
+| 4-6 | Run facilitated scoring and control-evidence workshops | No red risk without an action and owner |
+| 7-9 | Define KRIs and escalation thresholds | Monthly indicators for priority risks |
+| 10-12 | Produce the first consolidated review | Decisions, overdue actions and exceptions recorded |
 
-The model favours **governance maturity before analytical complexity**. The first implementation phase can run in a controlled spreadsheet or lightweight register. More advanced scenario modelling is gated behind agreed taxonomies, reliable KRIs and facilitated scoring workshops.
+The longer maturity path is set out in the [adoption roadmap](docs/ADOPTION_ROADMAP.md).
 
-The [implementation roadmap](docs/IMPLEMENTATION.md) sets out the ownership, cadence and maturity sequence. The [methodology](docs/METHODOLOGY.md) documents scoring rules, while [validation](docs/VALIDATION.md) distinguishes reproduced evidence from examples.
+## Control design, not decorative scoring
 
-## Reproduce the implementation
+The repository implements a register, 5×5 inherent/residual scoring, RAG escalation, FMEA prioritisation and KRI fields. The design deliberately avoids calculating residual risk from a generic “control percentage”; effectiveness has to be evidenced and judged.
+
+Read the [control model](docs/CONTROL_MODEL.md) for the scoring logic and the [assurance notes](docs/ASSURANCE_NOTES.md) before interpreting the example register.
+
+## Run the model
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
 pip install -r requirements.txt
 python analysis.py
 python -m unittest discover -s tests -v
 ```
 
-## Evidence boundary
+[`analysis.py`](analysis.py) builds the decision tables and charts; [`tests/`](tests/) checks scoring, bounds and reconciliations.
 
-This is not an official WB Alloys risk register. Organisation-specific tolerances, owners, controls and scores require validation in facilitated workshops. Commercial source material and the submitted MSc report are excluded; see [ASSET_NOTICE.md](ASSET_NOTICE.md).
+> This is a sanitised implementation, not an official WB Alloys risk register. Organisation-specific appetite, owners, controls and scores require facilitated validation. See [ASSET_NOTICE.md](ASSET_NOTICE.md).
